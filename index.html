@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Vollkorn:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-box">
+            <img id="logo" src="img/book.svg" alt="book logo">
+            <p class="logo-text">Library</p>
+        </div>
+        <div class="add-box">
+            <button id="add" type="button">Add a Book</button>
+        </div>
+    </header>
+
+
+    <div id="shelf">
+    </div>
+
+
+
+    <div class="popup-background">
+        <div id="popup">
+            <form action="#" id="form" name="form">
+                <h2>Add New Book</h2>
+                <img id="close" src="img/close.svg">
+                <input class="input" type="text" name="title" id="title" placeholder="Title" required>
+                <input class="input" type="text" name="author" id="author" placeholder="Author" required>
+                <input class="input" type="number" name="pages" id="pages" placeholder="Number of pages" required>
+                <div>
+                    <input type="checkbox" name="popup-read" id="popup-read" required>
+                    <label for="popup-read">Read</label>
+                </div>
+                <button id="form-submit" class="add" type="button">Add</button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

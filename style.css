@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+body {
+    background-color: #1E2E46;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 15px;
+    background-color: #101721;
+}
+
+.logo-box {
+    display: flex;
+    align-items: baseline;
+    max-width: 175px;
+    justify-content: space-between;
+}
+
+.logo-box > img {
+    height: 37px;
+    width:  40px;
+    fill: blue;
+    align-self: flex-start;
+    margin-right: 5px;
+}
+
+.logo-box > p {
+    font-family: 'Vollkorn', serif;
+    color: #F8F7F6;
+    font-size: 2.2rem;
+}
+
+.add-box > button {
+    border: none;
+    background-color: #1584CF;
+    color: #F8F7F6;
+    font-size: 1.1rem;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 100px;
+    outline: none;
+}
+
+.add-box > button:hover {
+    background-color: #1277bc;
+}
+
+.add-box > button:active {
+    transform: translateY(1.5px);
+}
+
+#shelf {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 300px;
+    gap: 70px;
+    max-width: 90%;
+    margin: 2rem auto;
+}
+
+.book {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #F8F7F6;
+    color: #6e7176;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
+    padding: 1rem;
+}
+
+.book > .title {
+    font-family: 'Vollkorn', serif;
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+.book > .author {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+input[type="checkbox"] {
+    display: inline-block;
+    transform: scale(1.5);
+    margin-right: 5px;
+}
+
+.book > .remove {
+    display: block;
+    border: none;
+    background-color: #3BA276;
+    color: #F8F7F6;
+    font-size: 1.1rem;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 100px;
+    outline: none;
+}
+
+.book > .remove:hover {
+    background-color: #288f63;
+}
+
+.book > .remove:active {
+    transform: translateY(1.5px);
+}
+
+.popup-background {
+    width: 100%;
+    height: 100%;
+    opacity: 0.95;
+    top: 0;
+    left: 0;
+    display: none;
+    position: fixed;
+    background-color:#313131;
+    overflow:auto
+}
+
+#popup {
+    position:absolute;
+    left:50%;
+    top:22%;
+    margin-left:-202px;
+}
+
+form {
+    max-width:300px;
+    min-width:250px;
+    padding:10px 30px 15px 30px;
+    border:2px solid gray;
+    border-radius:10px;
+    background-color:#fff
+}
+
+form > h2 {
+    font-family: 'Vollkorn', serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #101721;
+    text-align: center;
+}
+
+img#close {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right:-10px;
+    top:-10px;
+    border-radius: 50%;
+    background-color: #F44336;
+    padding: 5px;
+    cursor:pointer
+}
+
+.input {
+    width:100%;
+    padding:10px;
+    margin: 10px auto;
+    border:2px solid #111;
+    padding:5px 10px;
+    font-size:16px;
+    border-radius: 6px;
+    outline: none;
+
+}
+
+.input:focus {
+    border-color: #5551FF;
+}
+
+form > div {
+    margin-left: 5px;
+}
+
+form input[type="checkbox"] {
+    margin-top:30px;
+}
+
+.add {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border: none;
+    text-decoration:none;
+    width:100%;
+    text-align:center;
+    display:block;
+    background-color:#3BA276;
+    color: #F8F7F6;
+    cursor:pointer;
+    border-radius: 6px;
+    outline: none;
+    margin-top: 30px;
+}
+
+.add:hover {
+    background-color: #288f63;
+}
+
+.add:active {
+    transform: translateY(1.5px);
+}
+
+/* Animation */
+.scale-up-center {
+	-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+ @-webkit-keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+}
+
+@keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+}
+
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+    #shelf {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .add-box > button {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+}
