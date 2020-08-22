@@ -261,7 +261,6 @@ window.onload = () => {
         myLibrary.push(new Book('The Time Machine', 'H.G. Wells', '118', false));
         myLibrary.push(new Book('Treasure Island', 'Robert Louis Stevenson', '311', true));
         render();
-        console.log(false);
     } else {
         populateMyLibrary(JSON.parse(localStorage.getItem('myStoredLibrary')));
         render();
