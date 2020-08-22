@@ -66,7 +66,7 @@ header {
     grid-auto-rows: 300px;
     gap: 70px;
     max-width: 90%;
-    margin: 2rem auto;
+    margin: 2rem auto 5rem auto;
 }
 
 .book {
@@ -243,6 +243,41 @@ form input[type="checkbox"] {
               transform: scale(1);
     }
 }
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #101721;
+    color: white;
+    height: 40px;
+    padding-top: 4px;
+}
+
+.follow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.follow > p {
+    /* display: inline-block; */
+    font-size: 1rem;
+}
+
+.follow img {
+    height: 2rem;
+    margin-left: 0.5rem;
+    border-radius: 100%;
+    background-color: #1E2E46;
+    padding: 5px;
+}
+
+
+
+
 
 
 /* Media Queries */
