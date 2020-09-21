@@ -163,20 +163,20 @@ function populateMyLibrary(myStoredLibrary) {
     }
 }
 
+class Book {
+    constructor(title, author, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+    }
 
-
-function Book(title, author, pages, read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-}
-
-Book.prototype.toggleReadingStatus = function () {
-    if (this.read) {
-        this.read = false;
-    } else {
-        this.read = true;
+    toggleReadingStatus() {
+        if (this.read) {
+            this.read = false;
+        } else {
+            this.read = true;
+        }
     }
 }
 
